@@ -1,0 +1,323 @@
+*{
+    font-family: 'Inter', sans-serif;
+    --cor-principal: rgb(253, 171, 6);
+   
+}
+body{
+    margin:0;
+}
+#cabecalho{
+    background-color: var(--cor-principal);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 70px 0px 70px;
+    transition: 1s all;
+    border-bottom: solid 8px rgb(198, 136, 12);
+}
+nav>ul{
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+   
+}
+nav>ul>li{
+    margin-left: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    
+}
+nav>ul>li:nth-child(1){
+    margin: 0;
+}
+
+.links{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:rgb(71, 71, 71);
+    transition: 0.5s all;
+}
+.links:hover{
+    color:rgb(255, 255, 255);
+}
+.active{
+    color:rgb(255, 255, 255);
+}
+
+#conteudo{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    margin: 30px 0px 60px 0px
+}
+
+.produtos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: solid 5px black;
+    border-radius: 10px;
+    width: 20%;
+    margin: 0px 20px 0px 20px;
+    transition: 0.5s all;
+}
+.produtos:hover {
+    border-color: var(--cor-principal);
+    transform: scale(1.1);
+}
+
+.produtos>img{
+    width: 200px;
+}
+.produtos>p{
+    word-break: break;
+    text-align: center; 
+}
+main{
+    display: flex;
+    flex-direction: row;
+    margin:0 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+form > label{
+    margin-top: 20px;
+    padding-bottom:5px;
+}
+input, textarea{
+    border-radius: 8px;
+    border:solid 1px gray;
+    padding: 5px;
+}
+fieldset{
+    margin-top: 20px;
+    padding:0;
+    border: none;
+
+    display:flex;
+    flex-direction: column;
+}
+.formacontato{
+    margin-top: 5px;
+ 
+}
+select{
+    margin-left: 5px;
+    width: 80px;
+}
+#botEnviar{
+    width:250px;
+    font-size: 22px;
+    color:whitesmoke;
+    background-color: var(--cor-principal);
+    border:none;
+    border-radius: 5px;
+    margin: 20px 0px 0px 0px;
+    padding:10px;
+    cursor:pointer;
+    transition: 0.5s background;
+    transition:1s transform;
+
+}
+#botEnviar:hover{
+    background-color: rgb(222, 152, 14);
+    transform: scale(1.1);
+}
+#horarios{
+    margin: 0 0 20px 20px;
+}
+table{
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    height: 200px;
+    margin: 0 auto;
+}
+thead{
+    background-color: var(--cor-principal);
+    color: white;
+}
+td,th{
+    padding: 8px 15px;
+}
+#horarios h1{
+    font-size: 2rem;
+
+    color: var(--cor-principal);
+    text-align: center;
+
+}
+
+footer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: black;
+    color:white;
+}
+.margem-content{
+    margin:0 10%;
+}
+
+/*Pagina inicial*/
+
+.texto-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 1em 0 1em;
+    clear: left;
+
+}
+
+.texto-principal:before{
+    content: "[ ";
+}
+.texto-principal:after{
+    content: " ]";
+}
+.utensilios{
+    width: 150px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+#pag-principal{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    background:linear-gradient(#FEFEFE 0%,orange 70%,black 104%);
+}
+
+#mapa{
+    width: 100%;
+    text-align: center;
+}
+.mapa-conteudo{
+    margin: 2em auto;
+    width: 80%;
+}
+#beneficios{
+    
+    width: 100%;
+    padding-bottom: 2em;
+}
+#conteudo-beneficios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#conteudo-beneficios>ul{
+    margin: 0;
+    padding: 0;
+}
+.itens{
+    font-size: 1.2em;
+    line-height: 1.6em;
+    list-style: none;
+}
+.itens:nth-child(2n+1){
+    font-weight: bold;
+}
+.itens:before {
+    content: "★";
+}
+#img-beneficio{
+    width: 50%;
+}
+
+
+@media screen and (max-width: 768px){
+    #cabecalho{
+        flex-direction: column;
+       
+    }
+    nav>ul>li{
+    font-size: 1.3rem;
+
+    }
+    form{
+        width: 90%;
+    }
+    #botEnviar{
+        width: 100%;
+    }
+    main{
+        flex-direction: column;
+    }
+    #horarios{
+        width: 90%;
+        align-items: flex-start;
+    }
+    #horarios > h1{
+        margin-top: 50px;
+        text-align: start;
+
+    }
+    table{
+        margin:0;
+    }
+    .margem-content {
+        margin: 0 10%;
+    }
+    .mapa-conteudo{
+        width: 80%;
+    }
+    #conteudo-beneficios{
+        flex-direction: column;
+    }
+
+    .itens{
+        text-align: center;
+    }
+    #conteudo-beneficios>img{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .video{
+        width:100%;
+    }
+    #mapa{
+        width: 90%;
+    }
+    #conteudo{
+        flex-direction:column;
+    }
+    .produtos{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width:425px){
+    #cabecalho, nav, .sobreAlura, .mapa, .beneficios{
+        width: auto;
+    }
+    .links{
+        font-size: 0.8em;
+    }
+    .texto-principal{
+        font-size: 1.25em;
+    }
+    .itens{
+        font-size:1em;
+    }
+    .produtos{
+        width: 70%;
+    }
+}
